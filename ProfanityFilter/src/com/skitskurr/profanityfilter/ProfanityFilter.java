@@ -1,5 +1,7 @@
 package com.skitskurr.profanityfilter;
 
+import com.skitskurr.profanityfilter.tree.TreeRun;
+
 public class ProfanityFilter {
 
 	public static String filter(final String text) {
@@ -12,7 +14,7 @@ public class ProfanityFilter {
 	}
 	
 	static String filter(final String text, final Main plugin) {
-		return text;
+		return new TreeRun(text, plugin.getRoot()).run();
 	}
 	
 }

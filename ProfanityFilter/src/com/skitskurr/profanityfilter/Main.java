@@ -25,4 +25,8 @@ public class Main extends JavaPlugin{
 		return Main.current;
 	}
 	
+	Knot getRoot() {
+		return this.root;
+	}
+	
 }

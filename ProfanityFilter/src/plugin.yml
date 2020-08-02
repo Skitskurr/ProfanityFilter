@@ -1,0 +1,6 @@
+main: com.skitskurr.profanityfilter.Main
+name: ProfanityFilter
+version: 1.0
+description: A profanity filter for the chat.
+api-version: 1.15
+author: Skitskurr

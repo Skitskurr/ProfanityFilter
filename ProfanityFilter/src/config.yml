@@ -1,0 +1,45 @@
+# chars in the same group will be treated as equal
+# if a char is in more than one group it might cause unexpected behavior
+charGroups:
+- 0oö
+- 1ily|!
+- 2sz
+- 3e€
+- 4aä@
+- 5sß§$
+- 6g
+- 7t
+- 8b&
+- uüv
+- mn
+- vw
+- x%
+- ck([{<
+- )]}>
+# sequences in the same group will be treated as equal
+# sequences are separated with a semicolon
+# important note: the order here is relevant as all sequences are only applied once
+# so if you want one sequence to affect parts of another it must come after that
+sequenceGroups:
+- ä;ae
+- ai;ei
+- b;i3
+- d;c|;|)
+- h;|-|
+- i;ie
+- l;|_
+- w;\n
+- m;|v|;|v\;/v\;/v|
+- n;/v;|v
+- o;()
+- ö;oe
+- x;chs;)(
+- sh;sch
+- st;scht
+- sp;schp
+- ü;ue
+- v;\/;|/;\|
+# terms in this list will be filtered
+profanity:
+- bitch
+- fuck

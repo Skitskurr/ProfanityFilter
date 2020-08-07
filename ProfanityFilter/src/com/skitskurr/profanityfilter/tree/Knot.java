@@ -16,8 +16,11 @@ public class Knot {
 	}
 	
 	public Knot addChild(final char[] letters, final Knot child) {
-		if(!children.containsKey(letters[0])) {
-			for(final char letter: letters) {
+		for(final char letter: letters) {
+			// it should be enough to only do one check outside of the for loop
+			// but that could mess up if a character is in more than one charGroup
+			// also this is only done once on server start, so a loss of a few milliseconds doesn't matter
+			if(!this.children.containsKey(letter)) {
 				this.children.put(letter, child);
 				// every knot gets itself as child
 				// this way you can't just type a letter twice to bypass the filter

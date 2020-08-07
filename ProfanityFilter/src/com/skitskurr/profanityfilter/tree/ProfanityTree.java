@@ -36,12 +36,12 @@ public class ProfanityTree {
 		final Set<Knot> knots = new HashSet<>();
 		
 		final Knot root = new Knot();
+		knots.add(root);
 		
 		for(final String term: profanity) {
 			final char[] letters = term.toCharArray();
 			
 			Knot knot = root;
-			knots.add(root);
 			for(final char letter: letters) {
 				knot = knot.addChild(getCharGroup(charGroups, letter));
 				knots.add(knot);
@@ -55,6 +55,7 @@ public class ProfanityTree {
 				.map(group -> group.split(ProfanityTree.SEQUENCE_GROUP_DELIMITER))
 				.map(group -> Arrays.stream(group).map(sequence -> sequence.toCharArray()).collect(Collectors.toList()))
 				.collect(Collectors.toList());
+		
 		
 		for(final Knot knot: knots) {
 			for(final List<char[]> sequenceGroup: sequenceGroups) {
@@ -70,7 +71,9 @@ public class ProfanityTree {
 					}
 				}
 				
-				if(goal != null) {
+				// for some reason goal == knot messes up the tree, so until I got that figured out we skip those
+				// also they're not that important anyways
+				if(goal != null && goal != knot) {
 					for(final char[] sequence: sequenceGroup) {
 						Knot child = knot;
 						for(int i = 0; i < sequence.length; i++) {
@@ -84,6 +87,7 @@ public class ProfanityTree {
 				}
 			}
 		}
+		
 		
 		return root;
 	}

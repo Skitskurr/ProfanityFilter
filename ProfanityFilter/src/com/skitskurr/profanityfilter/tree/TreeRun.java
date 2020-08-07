@@ -3,9 +3,9 @@ package com.skitskurr.profanityfilter.tree;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class TreeRun {
 	
@@ -13,9 +13,8 @@ public class TreeRun {
 	private final Knot root;
 	
 	private final Set<Integer> indices = new HashSet<Integer>();
-	private final List<TreeWalker> walkers = new LinkedList<TreeWalker>();
+	private List<TreeWalker> walkers = new ArrayList<TreeWalker>();
 	private final List<TreeWalker> newWalkers = new ArrayList<TreeWalker>();
-	private final List<TreeWalker> deadWalkers = new ArrayList<TreeWalker>();
 	
 	public TreeRun(final String text, final Knot root) {
 		this.text = text.toCharArray();
@@ -38,14 +37,10 @@ public class TreeRun {
 		final char symbol = this.text[index];
 		
 		for(final TreeWalker walker: this.walkers) {
-			if(walker.step(index, symbol)){
-				deadWalkers.add(walker);
-			}
+			walker.step(index, symbol);
 		}
 		
-		for(final TreeWalker walker: this.deadWalkers) {
-			this.walkers.remove(walker);
-		}
+		this.walkers = this.walkers.stream().filter(walker -> !walker.isDead()).collect(Collectors.toList());
 	}
 	
 	public String run() {

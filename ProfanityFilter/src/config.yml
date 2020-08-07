@@ -1,15 +1,28 @@
+# terms in this list will be filtered
+# note that all terms should be written without whitespaces for better filtering
+profanity:
+- asshole
+- bastard
+- bitch
+- cunt
+- fuck
+- fucker
+- motherfucker
+- nigga
+- sonofabitch
+- sonofawhore
+- slut
+- whore
 # chars in the same group will be treated as equal
 # if a char is in more than one group it might cause unexpected behavior
 charGroups:
 - 0oö
 - 1ily|!
-- 2sz
+- 258bszß§$&
 - 3e€
 - 4aä@
-- 5sß§$
 - 6g
-- 7t
-- 8b&
+- 7dt+
 - uüv
 - mn
 - vw
@@ -23,23 +36,26 @@ charGroups:
 sequenceGroups:
 - ä;ae
 - ai;ei
+- ak;awk;ok;owk
+- ass;arse
 - b;i3
+- bait;bate;b8
 - d;c|;|)
+- ga;gar;ger;gur
 - h;|-|
 - i;ie
-- l;|_
+- ka;kar;ker;kur
+- lait;late;l8
 - w;\n
 - m;|v|;|v\;/v\;/v|
 - n;/v;|v
 - o;()
 - ö;oe
-- x;chs;)(
+- x;chs;ks;)(
 - sh;sch
 - st;scht
 - sp;schp
+- ta;tar;ter;tur
 - ü;ue
 - v;\/;|/;\|
-# terms in this list will be filtered
-profanity:
-- bitch
-- fuck
+- wo;who

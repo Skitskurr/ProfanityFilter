@@ -1,4 +1,4 @@
-package com.skitskurr.profanityfilter.tree;
+package com.versuchdrei.profanityfilter.tree;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -10,6 +10,11 @@ import java.util.stream.Collectors;
 
 import org.bukkit.configuration.file.FileConfiguration;
 
+/**
+ * a util class to build a profanity tree of Knots based on profane words
+ * @author VersuchDrei
+ * @version 1.0
+ */
 public class ProfanityTree {
 	
 	private static final String CONFIG_KEY_CHAR_GROUPS = "charGroups";

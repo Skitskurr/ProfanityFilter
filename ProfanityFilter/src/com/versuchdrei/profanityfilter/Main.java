@@ -1,11 +1,16 @@
-package com.skitskurr.profanityfilter;
+package com.versuchdrei.profanityfilter;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.skitskurr.profanityfilter.tree.Knot;
-import com.skitskurr.profanityfilter.tree.ProfanityTree;
+import com.versuchdrei.profanityfilter.tree.Knot;
+import com.versuchdrei.profanityfilter.tree.ProfanityTree;
 
+/**
+ * the main class of the profanity filter
+ * @author VersuchDrei
+ * @version 1.0
+ */
 public class Main extends JavaPlugin{
 	
 	private static Main current;

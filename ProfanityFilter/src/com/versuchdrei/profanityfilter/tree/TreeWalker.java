@@ -1,8 +1,14 @@
-package com.skitskurr.profanityfilter.tree;
+package com.versuchdrei.profanityfilter.tree;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * an instance of a walker running down the profanity tree, 
+ * adds indices of profane words to the TreeRun
+ * @author VersuchDrei
+ * @version 1.0
+ */
 public class TreeWalker {
 	
 	private Knot current;

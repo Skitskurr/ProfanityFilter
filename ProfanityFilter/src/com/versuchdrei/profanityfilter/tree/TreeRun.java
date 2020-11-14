@@ -1,4 +1,4 @@
-package com.skitskurr.profanityfilter.tree;
+package com.versuchdrei.profanityfilter.tree;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -7,6 +7,12 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+/**
+ * an instance of a run walking down the text, 
+ * remembers all indices of letters of profane words and replaces them with stars
+ * @author VersuchDrei
+ * @version 1.0
+ */
 public class TreeRun {
 	
 	private final char[] text;

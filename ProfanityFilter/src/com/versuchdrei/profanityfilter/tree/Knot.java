@@ -1,7 +1,12 @@
-package com.skitskurr.profanityfilter.tree;
+package com.versuchdrei.profanityfilter.tree;
 
 import java.util.HashMap;
 
+/**
+ * a knot in the profanity tree
+ * @author VersuchDrei
+ * @version 1.0
+ */
 public class Knot {
 
 	private final HashMap<Character, Knot> children = new HashMap<>();
